@@ -22,8 +22,8 @@ public class WebSecurity extends WebSecurityConfigurerAdapter {
                 .anonymous().disable()
                 .sessionManagement().sessionCreationPolicy(SessionCreationPolicy.STATELESS).and()
                 .authorizeRequests()
-                .antMatchers("*/admin/**").authenticated()
-                .and().httpBasic();
+                .antMatchers("/admin/**").authenticated().and()
+                .httpBasic();
     }
 
     @Override
