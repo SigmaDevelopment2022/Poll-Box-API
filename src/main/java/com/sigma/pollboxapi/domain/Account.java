@@ -17,7 +17,7 @@ public class Account implements UserDetails {
     private String password;
     private boolean authenticated;
     private String deviceIdentification;
-    private LocalDateTime createdAt;
+    private String createdAt;
 
     @Override
     public Collection<? extends GrantedAuthority> getAuthorities() {
