@@ -14,7 +14,7 @@ public abstract class AccountMapper implements RowMapper<Account> {
             return Account.builder()
                     .email(rs.getString("email"))
                     .username(rs.getString("username"))
-                    .createdAt(LocalDateTimeFormatter.fromDatabase(rs.getString("created_at")))
+                    .createdAt(LocalDateTimeFormatter.brazilianFormat(rs.getString("created_at")))
                     .build();
         }
     }
@@ -28,7 +28,7 @@ public abstract class AccountMapper implements RowMapper<Account> {
                     .username(rs.getString("username"))
                     .password(rs.getString("password"))
                     .authenticated(rs.getBoolean("authenticated"))
-                    .createdAt(LocalDateTimeFormatter.fromDatabase(rs.getString("created_at")))
+                    .createdAt(LocalDateTimeFormatter.brazilianFormat(rs.getString("created_at")))
                     .build();
         }
     }
