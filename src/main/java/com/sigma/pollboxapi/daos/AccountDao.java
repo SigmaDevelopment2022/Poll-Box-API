@@ -47,6 +47,7 @@ public class AccountDao {
                     account.getUsername(),
                     account.getPassword(),
                     account.isAuthenticated(),
+                    account.getDeviceIdentification(),
                     account.getEmail()) > 0;
         } catch (EmptyResultDataAccessException e) {
             throw new NotFoundException("Não há usuário cadastrado com este e-mail.");
