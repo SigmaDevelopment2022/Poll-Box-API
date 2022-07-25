@@ -7,7 +7,7 @@ import org.springframework.jdbc.core.RowMapper;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 
-abstract class AccountMapper implements RowMapper<Account> {
+public abstract class AccountMapper implements RowMapper<Account> {
     public static class Safe extends AccountMapper {
         @Override
         public Account mapRow(ResultSet rs, int rowNum) throws SQLException {
